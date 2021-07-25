@@ -125,7 +125,7 @@ namespace EmergencyService
             // 
             this.txtAge.Location = new System.Drawing.Point(155, 102);
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(44, 20);
+            this.txtAge.Size = new System.Drawing.Size(88, 20);
             this.txtAge.TabIndex = 8;
             // 
             // txtNID
