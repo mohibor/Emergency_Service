@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+
 namespace EmergencyService
 {
     public partial class SignUp : Form
@@ -29,6 +31,21 @@ namespace EmergencyService
 
             new Login().Show();
             this.Hide();
+        }
+
+        private void dTPDateOfBirth_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime dob = dTPDateOfBirth.Value;
+            DateTime curDate = DateTime.Now;
+
+            TimeSpan timeSpan = curDate - dob;
+
+            txtAge.Text = (timeSpan.TotalDays / 365).ToString("0");
+        }
+
+        private void lnkLblTermsAndConditions_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Terms and Conditions");
         }
     }
 }

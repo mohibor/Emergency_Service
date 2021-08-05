@@ -37,12 +37,14 @@ namespace EmergencyService
             this.lblSignUp = new System.Windows.Forms.Label();
             this.lnkLblSignUp = new System.Windows.Forms.LinkLabel();
             this.chckBoxKeepLogin = new System.Windows.Forms.CheckBox();
+            this.lblHeader = new System.Windows.Forms.Label();
+            this.lnkForgotpassword = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(179, 148);
+            this.lblUsername.Location = new System.Drawing.Point(130, 148);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(55, 13);
             this.lblUsername.TabIndex = 0;
@@ -50,7 +52,7 @@ namespace EmergencyService
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(256, 145);
+            this.txtUsername.Location = new System.Drawing.Point(207, 145);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
             this.txtUsername.TabIndex = 1;
@@ -58,7 +60,7 @@ namespace EmergencyService
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(179, 190);
+            this.lblPassword.Location = new System.Drawing.Point(130, 190);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(53, 13);
             this.lblPassword.TabIndex = 2;
@@ -66,7 +68,7 @@ namespace EmergencyService
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(256, 187);
+            this.txtPassword.Location = new System.Drawing.Point(207, 187);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
@@ -74,7 +76,8 @@ namespace EmergencyService
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(245, 264);
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLogin.Location = new System.Drawing.Point(196, 264);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 4;
@@ -85,7 +88,7 @@ namespace EmergencyService
             // lblSignUp
             // 
             this.lblSignUp.AutoSize = true;
-            this.lblSignUp.Location = new System.Drawing.Point(179, 304);
+            this.lblSignUp.Location = new System.Drawing.Point(130, 304);
             this.lblSignUp.Name = "lblSignUp";
             this.lblSignUp.Size = new System.Drawing.Size(122, 13);
             this.lblSignUp.TabIndex = 5;
@@ -94,7 +97,8 @@ namespace EmergencyService
             // lnkLblSignUp
             // 
             this.lnkLblSignUp.AutoSize = true;
-            this.lnkLblSignUp.Location = new System.Drawing.Point(311, 304);
+            this.lnkLblSignUp.LinkColor = System.Drawing.Color.Aqua;
+            this.lnkLblSignUp.Location = new System.Drawing.Point(262, 304);
             this.lnkLblSignUp.Name = "lnkLblSignUp";
             this.lnkLblSignUp.Size = new System.Drawing.Size(45, 13);
             this.lnkLblSignUp.TabIndex = 6;
@@ -105,18 +109,42 @@ namespace EmergencyService
             // chckBoxKeepLogin
             // 
             this.chckBoxKeepLogin.AutoSize = true;
-            this.chckBoxKeepLogin.Location = new System.Drawing.Point(182, 231);
+            this.chckBoxKeepLogin.Location = new System.Drawing.Point(133, 231);
             this.chckBoxKeepLogin.Name = "chckBoxKeepLogin";
             this.chckBoxKeepLogin.Size = new System.Drawing.Size(114, 17);
             this.chckBoxKeepLogin.TabIndex = 18;
             this.chckBoxKeepLogin.Text = "Keep me logged in";
             this.chckBoxKeepLogin.UseVisualStyleBackColor = true;
             // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Location = new System.Drawing.Point(116, 89);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(215, 25);
+            this.lblHeader.TabIndex = 34;
+            this.lblHeader.Text = "Emergency Service";
+            // 
+            // lnkForgotpassword
+            // 
+            this.lnkForgotpassword.AutoSize = true;
+            this.lnkForgotpassword.LinkColor = System.Drawing.Color.Aqua;
+            this.lnkForgotpassword.Location = new System.Drawing.Point(176, 345);
+            this.lnkForgotpassword.Name = "lnkForgotpassword";
+            this.lnkForgotpassword.Size = new System.Drawing.Size(95, 13);
+            this.lnkForgotpassword.TabIndex = 35;
+            this.lnkForgotpassword.TabStop = true;
+            this.lnkForgotpassword.Text = "Forgot Password? ";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(442, 492);
+            this.Controls.Add(this.lnkForgotpassword);
+            this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.chckBoxKeepLogin);
             this.Controls.Add(this.lnkLblSignUp);
             this.Controls.Add(this.lblSignUp);
@@ -125,9 +153,10 @@ namespace EmergencyService
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblUsername);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,6 +172,8 @@ namespace EmergencyService
         private System.Windows.Forms.Label lblSignUp;
         private System.Windows.Forms.LinkLabel lnkLblSignUp;
         private System.Windows.Forms.CheckBox chckBoxKeepLogin;
+        private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.LinkLabel lnkForgotpassword;
     }
 }
 

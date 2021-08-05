@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+
 namespace EmergencyService
 {
     public partial class MainForm : Form
@@ -36,6 +38,12 @@ namespace EmergencyService
         private void btnAmbulance_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Calling Ambulance");
+        }
+
+        private void lnkLblLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new Login().Show();
+            this.Hide();
         }
     }
 }

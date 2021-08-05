@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+
 namespace EmergencyService
 {
     public partial class Login : Form
@@ -27,6 +29,16 @@ namespace EmergencyService
                 if (password == "password")
                 {
                     new MainForm().Show();
+                    this.Hide();
+                }
+                else
+                    MessageBox.Show("Username or Password is incorrect");
+            }
+            else if (username == "admin")
+            {
+                if (password == "password")
+                {
+                    new AdminPage().Show();
                     this.Hide();
                 }
                 else

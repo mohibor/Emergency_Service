@@ -29,38 +29,32 @@ namespace EmergencyService
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.lnkLogOut = new System.Windows.Forms.LinkLabel();
+            this.lnkLblLogOut = new System.Windows.Forms.LinkLabel();
             this.btnFireService = new System.Windows.Forms.Button();
             this.btnPolice = new System.Windows.Forms.Button();
             this.btnAmbulance = new System.Windows.Forms.Button();
+            this.lblHeader = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblWelcome
+            // lnkLblLogOut
             // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Location = new System.Drawing.Point(137, 54);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(116, 13);
-            this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome to the Home ";
-            // 
-            // lnkLogOut
-            // 
-            this.lnkLogOut.AutoSize = true;
-            this.lnkLogOut.Location = new System.Drawing.Point(332, 54);
-            this.lnkLogOut.Name = "lnkLogOut";
-            this.lnkLogOut.Size = new System.Drawing.Size(45, 13);
-            this.lnkLogOut.TabIndex = 1;
-            this.lnkLogOut.TabStop = true;
-            this.lnkLogOut.Text = "Log Out";
-            this.lnkLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLogOut_LinkClicked);
+            this.lnkLblLogOut.AutoSize = true;
+            this.lnkLblLogOut.LinkColor = System.Drawing.Color.Aqua;
+            this.lnkLblLogOut.Location = new System.Drawing.Point(330, 433);
+            this.lnkLblLogOut.Name = "lnkLblLogOut";
+            this.lnkLblLogOut.Size = new System.Drawing.Size(45, 13);
+            this.lnkLblLogOut.TabIndex = 1;
+            this.lnkLblLogOut.TabStop = true;
+            this.lnkLblLogOut.Text = "Log Out";
+            this.lnkLblLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLblLogOut_LinkClicked);
             // 
             // btnFireService
             // 
-            this.btnFireService.Location = new System.Drawing.Point(157, 128);
+            this.btnFireService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFireService.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnFireService.Location = new System.Drawing.Point(164, 166);
             this.btnFireService.Name = "btnFireService";
-            this.btnFireService.Size = new System.Drawing.Size(75, 23);
+            this.btnFireService.Size = new System.Drawing.Size(111, 40);
             this.btnFireService.TabIndex = 2;
             this.btnFireService.Text = "Fire Service";
             this.btnFireService.UseVisualStyleBackColor = true;
@@ -68,9 +62,11 @@ namespace EmergencyService
             // 
             // btnPolice
             // 
-            this.btnPolice.Location = new System.Drawing.Point(157, 195);
+            this.btnPolice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPolice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPolice.Location = new System.Drawing.Point(164, 233);
             this.btnPolice.Name = "btnPolice";
-            this.btnPolice.Size = new System.Drawing.Size(75, 23);
+            this.btnPolice.Size = new System.Drawing.Size(111, 40);
             this.btnPolice.TabIndex = 3;
             this.btnPolice.Text = "Police";
             this.btnPolice.UseVisualStyleBackColor = true;
@@ -78,38 +74,51 @@ namespace EmergencyService
             // 
             // btnAmbulance
             // 
-            this.btnAmbulance.Location = new System.Drawing.Point(157, 262);
+            this.btnAmbulance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAmbulance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAmbulance.Location = new System.Drawing.Point(164, 300);
             this.btnAmbulance.Name = "btnAmbulance";
-            this.btnAmbulance.Size = new System.Drawing.Size(75, 23);
+            this.btnAmbulance.Size = new System.Drawing.Size(111, 40);
             this.btnAmbulance.TabIndex = 4;
             this.btnAmbulance.Text = "Ambulance";
             this.btnAmbulance.UseVisualStyleBackColor = true;
             this.btnAmbulance.Click += new System.EventHandler(this.btnAmbulance_Click);
             // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Location = new System.Drawing.Point(116, 62);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(215, 25);
+            this.lblHeader.TabIndex = 34;
+            this.lblHeader.Text = "Emergency Service";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(442, 492);
+            this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.btnAmbulance);
             this.Controls.Add(this.btnPolice);
             this.Controls.Add(this.btnFireService);
-            this.Controls.Add(this.lnkLogOut);
-            this.Controls.Add(this.lblWelcome);
+            this.Controls.Add(this.lnkLblLogOut);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
+            this.Text = "Home";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.LinkLabel lnkLogOut;
+        private System.Windows.Forms.LinkLabel lnkLblLogOut;
         private System.Windows.Forms.Button btnFireService;
         private System.Windows.Forms.Button btnPolice;
         private System.Windows.Forms.Button btnAmbulance;
+        private System.Windows.Forms.Label lblHeader;
     }
 }
