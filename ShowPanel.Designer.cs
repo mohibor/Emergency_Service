@@ -43,7 +43,6 @@ namespace EmergencyService
             this.dGVShow.Name = "dGVShow";
             this.dGVShow.Size = new System.Drawing.Size(407, 382);
             this.dGVShow.TabIndex = 0;
-            this.dGVShow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVShow_CellContentClick);
             // 
             // lblHeader
             // 
@@ -80,6 +79,7 @@ namespace EmergencyService
             this.Name = "ShowPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShowPanel";
+            this.Load += new System.EventHandler(this.ShowPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGVShow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

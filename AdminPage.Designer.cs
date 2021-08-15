@@ -32,10 +32,10 @@ namespace EmergencyService
             this.lblHeader = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.btnShow = new System.Windows.Forms.Button();
+            this.btnShowAllUser = new System.Windows.Forms.Button();
             this.lnkLblLogOut = new System.Windows.Forms.LinkLabel();
             this.lblSerchBy = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbBoxSearch = new System.Windows.Forms.ComboBox();
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -73,17 +73,17 @@ namespace EmergencyService
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // btnShow
+            // btnShowAllUser
             // 
-            this.btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShow.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnShow.Location = new System.Drawing.Point(165, 127);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(125, 45);
-            this.btnShow.TabIndex = 36;
-            this.btnShow.Text = "Show All Users";
-            this.btnShow.UseVisualStyleBackColor = true;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            this.btnShowAllUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAllUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnShowAllUser.Location = new System.Drawing.Point(165, 127);
+            this.btnShowAllUser.Name = "btnShowAllUser";
+            this.btnShowAllUser.Size = new System.Drawing.Size(125, 45);
+            this.btnShowAllUser.TabIndex = 36;
+            this.btnShowAllUser.Text = "Show All Users";
+            this.btnShowAllUser.UseVisualStyleBackColor = true;
+            this.btnShowAllUser.Click += new System.EventHandler(this.btnShowAllUser_Click);
             // 
             // lnkLblLogOut
             // 
@@ -106,18 +106,17 @@ namespace EmergencyService
             this.lblSerchBy.TabIndex = 40;
             this.lblSerchBy.Text = "Search By";
             // 
-            // comboBox1
+            // cmbBoxSearch
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbBoxSearch.FormattingEnabled = true;
+            this.cmbBoxSearch.Items.AddRange(new object[] {
             "Name",
             "NID Number",
-            "Username",
             "Phone Number"});
-            this.comboBox1.Location = new System.Drawing.Point(232, 227);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(98, 21);
-            this.comboBox1.TabIndex = 41;
+            this.cmbBoxSearch.Location = new System.Drawing.Point(232, 227);
+            this.cmbBoxSearch.Name = "cmbBoxSearch";
+            this.cmbBoxSearch.Size = new System.Drawing.Size(98, 21);
+            this.cmbBoxSearch.TabIndex = 41;
             // 
             // txtSearchBox
             // 
@@ -133,12 +132,12 @@ namespace EmergencyService
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(442, 492);
             this.Controls.Add(this.txtSearchBox);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbBoxSearch);
             this.Controls.Add(this.lblSerchBy);
             this.Controls.Add(this.lnkLblLogOut);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.btnShow);
+            this.Controls.Add(this.btnShowAllUser);
             this.Controls.Add(this.lblHeader);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "AdminPage";
@@ -154,10 +153,10 @@ namespace EmergencyService
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.Button btnShowAllUser;
         private System.Windows.Forms.LinkLabel lnkLblLogOut;
         private System.Windows.Forms.Label lblSerchBy;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbBoxSearch;
         private System.Windows.Forms.TextBox txtSearchBox;
     }
 }

@@ -12,11 +12,20 @@ using System.Data.SqlClient;
 
 namespace EmergencyService
 {
-    public partial class MainForm : Form
+    public partial class Home : Form
     {
-        public MainForm()
+        public Home()
         {
             InitializeComponent();
+        }
+
+        override protected void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            if (e.CloseReason != CloseReason.WindowsShutDown)
+            {
+                Application.Exit();
+            }
         }
 
         private void lnkLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

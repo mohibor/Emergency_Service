@@ -1,7 +1,7 @@
 ﻿
 namespace EmergencyService
 {
-    partial class MainForm
+    partial class Home
     {
         /// <summary>
         /// Required designer variable.

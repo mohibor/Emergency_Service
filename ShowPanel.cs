@@ -19,26 +19,48 @@ namespace EmergencyService
             InitializeComponent();
         }
 
-        private static SqlConnection connection = Database.GetConnection();
+        private string query;
 
-        private void dGVShow_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public ShowPanel(string query)
         {
-            connection.Open();
-
-            string query = String.Format("SELECT * FROM [user]");
-            SqlDataAdapter dtAdapter = new SqlDataAdapter(query, connection);
-
-            DataTable dt = new DataTable();
-            dtAdapter.Fill(dt);
-            dGVShow.DataSource = dt;
-
-            connection.Close();
+            InitializeComponent();
+            this.query = query;
         }
+        override protected void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            if (e.CloseReason != CloseReason.WindowsShutDown)
+            {
+                Application.Exit();
+            }
+        }
+
+        private static SqlConnection connection = Database.GetConnection();
 
         private void lnklblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new AdminPage().Show();
             this.Hide();
+        }
+
+        private void ShowPanel_Load(object sender, EventArgs e)
+        {
+            ShowPanel.connection.Open();
+
+            SqlDataAdapter sdt = new SqlDataAdapter(this.query, ShowPanel.connection);
+
+            DataTable dt = new DataTable();
+            try
+            {
+                sdt.Fill(dt);
+            }
+            catch(Exception er)
+            {
+                
+            }
+            dGVShow.DataSource = dt;
+
+            ShowPanel.connection.Close();
         }
     }
 }
